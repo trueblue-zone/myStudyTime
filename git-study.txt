@@ -1,23 +1,24 @@
-t:
+t:（大部分命令后面可以直接加上文件名）
 git init
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 git config --global alias.st status
-git config --global alias.unstage 'reset HEAD'
+git config --global alias.unstage 'reset HEAD'（命令重命名可以呆参数）
 git add,commit -m, 
-git log --pretty=oneline,reflog
-git log -2
+git log --pretty=oneline,reflog（reflog是用于显示提交历史的版本号等信息）
+git log -2（显示2条记录）
 git reset --hard HEAD[^ /~100/ec2930]
-git diff HEAD -- b.txt
+git diff HEAD -- b.txt（head可以小写，当前版本的指针，代表当前版本）
 
 
-git remote add origin git@github.com:trueblue-zone/test.git
+git remote add origin git@github.com:trueblue-zone/test.git（后面的一长串就是git地址，test.git就是要关联的库的名字）
 git push -u origin master
-git remote remove origin
+git remote remove origin（origin是个名字，代表远程库的，可以换）
 git remote
+git clone git@github.com:trueblue-zone/test.git(会自动关联库)
 
-git checkout -- filename
-git checkout branchname
+git checkout -- filename（丢掉修改，--代表当前分支）
+git checkout branchname（checkout其实是切换分支的命令）
 git checkout -b branchname == git branch branchname+git checkout branchname
 git branch -d branchname
 git branch
@@ -25,13 +26,13 @@ git merge branchname
 git branch --set-upstream branch-name origin/branch-name
 
 
-git stash
+git stash（暂存当前环境，可以让即使用户没有merge也可以切换到其他分支）
 git stash list
 git stash apply
-git stash pop
+git stash pop（会删掉stash里面的信息，apply不会）
 
-git tag v.01
-git tag -a v.01 -m 'sdf' es33032
+git tag v.01（当前默认用的标签）
+git tag -a v.01 -m 'sdf' es33032（给指定版本打标签）
 git show v.01
 git check-ignore -v .egg
 
