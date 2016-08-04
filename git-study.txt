@@ -1,0 +1,45 @@
+t:
+git init
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD'
+git add,commit -m, 
+git log --pretty=oneline,reflog
+git log -2
+git reset --hard HEAD[^ /~100/ec2930]
+git diff HEAD -- b.txt
+
+
+git remote add origin git@github.com:trueblue-zone/test.git
+git push -u origin master
+git remote remove origin
+git remote
+
+git checkout -- filename
+git checkout branchname
+git checkout -b branchname == git branch branchname+git checkout branchname
+git branch -d branchname
+git branch
+git merge branchname
+git branch --set-upstream branch-name origin/branch-name
+
+
+git stash
+git stash list
+git stash apply
+git stash pop
+
+git tag v.01
+git tag -a v.01 -m 'sdf' es33032
+git show v.01
+git check-ignore -v .egg
+
+
+
+git和svn相比：
+1 git是分布式，不需联网就可以工作；svn等是集成式版本控制器
+2 Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念
+3 Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改
+4 其他版本控制系统如SVN等都有分支管理，但是用过之后你会发现，这些版本控制系统
+创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。
